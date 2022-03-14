@@ -12,7 +12,7 @@ namespace TestOOP
             Console.WriteLine("1. Nhap thong tin hoa don.                    ");
             Console.WriteLine("2. Xuat thong tin hoa don.                    ");
             Console.WriteLine("3. Luu thong tin hoa don thanh file text o Dekstop.     ");
-            Console.WriteLine("4. Thoat.                                     ");
+            Console.WriteLine("0. Thoat.                                     ");
         }
         static void Main(string[] args)
         {
@@ -21,8 +21,9 @@ namespace TestOOP
             int option=0;
             int count = 0;
             bool[] options = new bool[3];
-            while (true)
+            do
             {
+                Console.WriteLine("Nhap tu 1-4");
                 try
                 {
                     option = int.Parse(Console.ReadLine());
@@ -31,14 +32,14 @@ namespace TestOOP
                 {
                     Console.WriteLine("vui long nhap so tu 1-4");
                 }
-                switch(option)
+                switch (option)
                 {
                     case 1:
                         options[0] = true;
                         bills.Input();
                         Console.WriteLine("chon tiep");
                         count++;
-                            break;
+                        break;
                     case 2:
                         options[1] = true;
                         if (options[0])
@@ -57,20 +58,22 @@ namespace TestOOP
                         Console.WriteLine("chon tiep");
                         count++;
                         break;
-                    case 4:
+                    case 0:
                         return;
 
                     default:
-                        return;
+                        break;
                 }
                 if (count == 3)
                 {
                     Console.Clear();
-                    Menu();
                     count = 0;
+                    Menu();
+
                 }
 
             }
+            while (option!=0);
               
         }
     }

@@ -43,7 +43,7 @@ namespace TestOOP.Product.AirConditioners.cs
             } while (inverter <0 || inverter >= 2);
             do
             {
-                Console.Write("\t\t So luong ban ra: ");
+                Console.Write("\t\t\tSo luong ban ra: ");
                 try
                 {
                     Amount = int.Parse(Console.ReadLine());
@@ -68,24 +68,24 @@ namespace TestOOP.Product.AirConditioners.cs
         {
             if (inverter == 1)
             {
-                Console.WriteLine("\t\t may lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 1 chieu" + "\n\t\t\tco inverter" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
+                Console.WriteLine("\t\t\t may lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 1 chieu" + "\n\t\t\tco inverter" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\t\tSo luong " + Amount.ToString());
             }
             else
             {
-                Console.WriteLine("\t\t may lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 1 chieu" + "\n\t\t\tKhong co inverter" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
+                Console.WriteLine("\t\t\t may lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 1 chieu" + "\n\t\t\tKhong co inverter" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\t\tSo luong " + Amount.ToString());
 
             }
         }
         public override void OutToText()
         {
             StreamWriter sw = File.AppendText(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\danh_sach_hoa_don.txt");
-            sw.WriteLine("\t\tMay lanh 2 chieu");
+            sw.WriteLine("\t\t\tMay lanh 2 chieu");
             sw.WriteLine("\t\t\tNhap ma: " + deviceId);
             sw.WriteLine("\t\t\tTen sp: " + deviceName);
             sw.WriteLine("\t\t\tNoi sx: " + deviceOriginal);
             if (inverter == 0) sw.WriteLine("\t\t\tCo inverter "); else sw.WriteLine("\t\t\tkhong Co inverter  ");
             sw.WriteLine("\t\t\tDon gia: " + devicePrice);
-            sw.WriteLine("\t\tSl ban ra: " + Amount);
+            sw.WriteLine("\t\t\tSl ban ra: " + Amount);
             sw.Close();
         }
     }

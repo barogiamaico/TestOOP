@@ -13,7 +13,7 @@ namespace TestOOP.Product.Fans
         {
             do
             {
-                Console.Write("\t\t\tNhap ma 3-10 ki tu gom so hoac chu (VD: A01): ");
+                Console.Write("\t\t\tNhap ma 3-10 ki tu gom so hoac chu (VD: D01): ");
                 deviceId = Console.ReadLine();
             }
             while (!checkID(deviceId));
@@ -50,12 +50,12 @@ namespace TestOOP.Product.Fans
         }
         public override void Output()
         {
-            Console.WriteLine("\t\t may quat dung \n\t\t\tma san pham: " + deviceId + "\n\t\t\t quat dung" + "\n\t\t\t" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
+            Console.WriteLine("\t\t\t may quat dung \n\t\t\tma san pham: " + deviceId + "\n\t\t\t quat dung" + "\n\t\t\t" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
         }
         public override void OutToText()
         {
             StreamWriter sw = File.AppendText(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\danh_sach_hoa_don.txt");
-            sw.WriteLine("\t\tQuat dung");
+            sw.WriteLine("\t\t\tQuat dung");
             sw.WriteLine("\t\t\tNhap ma: " + deviceId);
             sw.WriteLine("\t\t\tTen sp: " + deviceName);
             sw.WriteLine("\t\t\tNoi sx: " + deviceOriginal);

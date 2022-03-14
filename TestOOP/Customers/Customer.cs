@@ -11,7 +11,7 @@ namespace TestOOP.Customers
     {
         private string _idCustomer;
         private string _nameCustomer;
-        private long _phoneNumber;
+        private string _phoneNumber;
         private string _address;
         public Customer()
         {
@@ -21,7 +21,7 @@ namespace TestOOP.Customers
         {
             do
             {
-                Console.Write("\n\t\t Nhap id cua khach hang: ");
+                Console.Write("\n\t\t Nhap ma cua khach hang (VD : KH01): ");
                 _idCustomer = Console.ReadLine();
             }
             while (!checkID(_idCustomer));
@@ -38,14 +38,14 @@ namespace TestOOP.Customers
                 Console.Write("\t\t Nhap sdt cua khach: ");
                 try
                 {
-                _phoneNumber = long.Parse(Console.ReadLine());
+                _phoneNumber = Console.ReadLine();
                 }
                 catch
                 {
                     Console.WriteLine("Vui long nhap so");
                 }
             }
-            while (_phoneNumber <5);
+            while (_phoneNumber.Length<9 || _phoneNumber.Length>11);
             do
             {
                 Console.Write("\t\t Nhap dia chi cua khach: ");

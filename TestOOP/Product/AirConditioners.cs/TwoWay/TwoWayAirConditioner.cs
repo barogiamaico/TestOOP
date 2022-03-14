@@ -16,7 +16,7 @@ namespace TestOOP.Product.AirConditioners.cs
         {
             do
             {
-                Console.Write("\t\t\tNhap ma 3-10 ki tu gom so hoac chu (VD: A01): ");
+                Console.Write("\t\t\tNhap ma 3-10 ki tu gom so hoac chu (VD: B01): ");
                 deviceId = Console.ReadLine();
             }
             while (!checkID(deviceId));
@@ -41,7 +41,7 @@ namespace TestOOP.Product.AirConditioners.cs
                 }
                 catch
                 {
-                    Console.WriteLine("\t\t\tVui long chi chon 1 hoac 2");
+                    Console.WriteLine("\t\t\tVui long chi chon 1 hoac 0");
                 }
             } while (inverter <0 || inverter >= 2);
             while (_antiSmell < 0 || _antiSmell >= 2)
@@ -99,12 +99,12 @@ namespace TestOOP.Product.AirConditioners.cs
         {
             if (inverter == 1) { 
                 if (_antiSmell == 1 && _antiMicro == 1)
-                    Console.WriteLine("\t\t may lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 2 chieu" + "\n\t\t\tco inverter, co khu mui va co khang khuan" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
+                    Console.WriteLine("\t\t\tmay lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 2 chieu" + "\n\t\t\tco inverter, co khu mui va co khang khuan" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
                 else if (_antiSmell == 1 && _antiMicro == 0)
-                    Console.WriteLine("\t\t may lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 2 chieu" + "\n\t\t\tco inverter, co khu mui va khong co khang khuan" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
+                    Console.WriteLine("\t\t\tmay lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 2 chieu" + "\n\t\t\tco inverter, co khu mui va khong co khang khuan" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
                 else if (_antiSmell == 0 && _antiMicro == 1)
-                    Console.WriteLine("\t\t may lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 2 chieu" + "\n\t\t\tco inverter,khong co khu mui va co khang khuan" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
-                else Console.WriteLine("\t\t may lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 2 chieu" + "\n\t\t\tco inverter,khong co khu mui va khong co khang khuan" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
+                    Console.WriteLine("\t\t\tmay lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 2 chieu" + "\n\t\t\tco inverter,khong co khu mui va co khang khuan" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
+                else Console.WriteLine("\t\t\tmay lanh: \n\t\t\tma san pham: " + deviceId + "\n\t\t\t may lanh 2 chieu" + "\n\t\t\tco inverter,khong co khu mui va khong co khang khuan" + "\n\t\t\tTen: " + deviceName + "\n\t\t\t gia: " + devicePrice.ToString() + "\n\t\tSo luong " + Amount.ToString());
             }
             else
             {
@@ -127,9 +127,9 @@ namespace TestOOP.Product.AirConditioners.cs
             sw.WriteLine("\t\t\tNhap ma: " + deviceId);
             sw.WriteLine("\t\t\tTen sp: " + deviceName);
             sw.WriteLine("\t\t\tNoi sx: " + deviceOriginal);
-            if (_antiSmell == 0) sw.WriteLine("\t\t\tChong mui "); else sw.WriteLine("\t\t\tkhong Chong mui ");
-            if (_antiMicro == 0) sw.WriteLine("\t\t\tChong khuan "); else sw.WriteLine("\t\t\tkhong Chong khuan ");
-            if (inverter == 0) sw.WriteLine("\t\t\tCo inverter "); else sw.WriteLine("\t\t\tkhong Co inverter  ");
+            if (_antiSmell == 1) sw.WriteLine("\t\t\tChong mui "); else sw.WriteLine("\t\t\tkhong Chong mui ");
+            if (_antiMicro == 1) sw.WriteLine("\t\t\tChong khuan "); else sw.WriteLine("\t\t\tkhong Chong khuan ");
+            if (inverter == 1) sw.WriteLine("\t\t\tCo inverter "); else sw.WriteLine("\t\t\tkhong Co inverter  ");
 
             sw.WriteLine("\t\t\tDon gia: " + devicePrice);
             sw.WriteLine("\t\tSl ban ra: " + Amount);

@@ -14,7 +14,7 @@ namespace TestOOP.Product.Fans
         {
             while (typeFan<=0 || typeFan > 3)
             {
-                Console.Write("\t\t\tChon loai quay (1- quat dung, 2- quat hoi nc , 3- quat dien):");
+                Console.Write("\t\t\tChon loai quat (1- quat dung, 2- quat hoi nc , 3- quat dien):");
                 try
                 {
                     typeFan = int.Parse(Console.ReadLine());
